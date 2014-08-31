@@ -571,6 +571,12 @@ class AsanaAPI(object):
         """
         return self._asana('tags/%d/tasks' % tag_id)
 
+    def get_tag(self, tag_id):
+        """Get a tag
+
+        :param tag_id: id# of tag"""
+        return self._asana("tags/%d" % tag_id)
+
     def create_tag(self, tag, workspace):
         """Create tag
 
